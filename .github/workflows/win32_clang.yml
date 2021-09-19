@@ -27,5 +27,5 @@ jobs:
 
       - name: Build
         run: |
-          cmake --build "${{ env.CMAKE_BUILD_DIR }}" --target install --config Debug
-          cmake --build "${{ env.CMAKE_BUILD_DIR }}" --target install --config Release
+          cmake --build "${{ env.CMAKE_BUILD_DIR }}" --target all --config Debug
+          cmake --build "${{ env.CMAKE_BUILD_DIR }}" --target all --config Release
