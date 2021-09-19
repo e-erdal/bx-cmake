@@ -19,11 +19,13 @@ jobs:
           submodules: recursive
 
       - uses: lukka/get-cmake@latest
-      - uses: ilammy/msvc-dev-cmd@v1
+      - uses: crazy-max/ghaction-chocolatey@v1
+        with:
+          args: install ninja --accept-license -y
 
       - name: Generate project files
         run: |
-          cmake -B "${{ env.CMAKE_BUILD_DIR }}" -DCMAKE_INSTALL_PREFIX="${{ env.CMAKE_INSTALL_DIR }}" -DCMAKE_DEBUG_POSTFIX=d
+          cmake -B "${{ env.CMAKE_BUILD_DIR }}" -DCMAKE_INSTALL_PREFIX="${{ env.CMAKE_INSTALL_DIR }}" -DCMAKE_DEBUG_POSTFIX=d -G Ninja
 
       - name: Build
         run: |
