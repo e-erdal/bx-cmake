@@ -23,7 +23,9 @@ jobs:
       - uses: lukka/get-cmake@latest
       - uses: crazy-max/ghaction-chocolatey@v1
         with:
-          args: install ninja --accept-license -y
+          args: |
+            install ninja --accept-license -y
+            install llvm
 
       - name: Generate project files
         run: |
