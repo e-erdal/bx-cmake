@@ -1,4 +1,4 @@
-name: WIN32-MSVC
+name: OSX-Clang
 on:
   push:
     branches: [ master ]
