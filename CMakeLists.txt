@@ -216,4 +216,6 @@ add_library(bx STATIC ${BX_SOURCES})
             target_link_directories(bx PUBLIC "${ANDROID_NDK}/sources/cxx-stl/llvm-libc++/libs/x86")
         endif()
     endif()
+    if (APPLE)
+    endif()
 
