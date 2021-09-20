@@ -21,9 +21,6 @@ jobs:
           submodules: recursive
 
       - uses: lukka/get-cmake@latest
-      - uses: crazy-max/ghaction-chocolatey@v1
-        with:
-          args: install ninja --accept-license -y
 
       - uses: egor-tensin/setup-clang@v1
         with:
