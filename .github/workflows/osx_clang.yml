@@ -1,4 +1,4 @@
-name: Android
+name: WIN32-MSVC
 on:
   push:
     branches: [ master ]
@@ -7,22 +7,13 @@ on:
 
 jobs:
   Build:
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        include:
-          - name: android-arm
-            arch: armeabi-v7a
-          - name: android-arm64
-            arch: arm64-v8a
-          - name: android-x86
-            arch: x86
-          - name: android-x86_64
-            arch: x86_64
+    runs-on: macos-latest
 
     env:
       CMAKE_BUILD_DIR: ${{ github.workspace }}/build/
       CMAKE_INSTALL_DIR: ${{ github.workspace }}/install/
+      CC: clang
+      CXX: clang++
 
     steps:
       - uses: actions/checkout@v2
