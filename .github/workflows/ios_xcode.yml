@@ -1,4 +1,4 @@
-name: iOS-Clang
+name: iOS-Xcode
 on:
   push:
     branches: [ master ]
@@ -12,8 +12,6 @@ jobs:
     env:
       CMAKE_BUILD_DIR: ${{ github.workspace }}/build/
       CMAKE_INSTALL_DIR: ${{ github.workspace }}/install/
-      CC: clang
-      CXX: clang++
 
     steps:
       - uses: actions/checkout@v2
