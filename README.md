@@ -7,4 +7,4 @@ Stand-alone version of bx with CMake support.
 | Linux       | GCC, Clang                  |
 | Android     | To do                       |
 | MacOS       | GCC, Clang                  |
-| iOS         | To do                       |
+| iOS         | Xcode(Clang)                |
