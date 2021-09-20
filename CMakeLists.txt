@@ -140,6 +140,7 @@ add_library(bx STATIC ${BX_SOURCES})
         target_link_libraries(bx ${CMAKE_THREAD_LIBS_INIT} rt dl)
     endif()
     if(ANDROID)
+        message("Currently building for Android.")
         include(cmake/android.cmake)
 
         # https://android.googlesource.com/platform/tools/cmake-utils/+/refs/heads/cmake-master-dev/android.toolchain.cmake#332
