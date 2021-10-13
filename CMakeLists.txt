@@ -118,9 +118,6 @@ add_library(bx STATIC ${BX_SOURCES})
 
         target_compile_options(bx PUBLIC "-Wshadow")
         target_compile_options(bx PUBLIC "-Wunused-value")
-
-        target_link_options(bx PUBLIC "-Wl,--gc-sections")
-        target_link_options(bx PUBLIC "-Wl,--as-needed")
         
         target_include_directories(bx PUBLIC ${BX_DIR}/include/compat/msvc)
 
